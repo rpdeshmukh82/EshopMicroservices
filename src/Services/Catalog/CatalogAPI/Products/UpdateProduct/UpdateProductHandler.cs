@@ -8,6 +8,7 @@
     {
         public async Task<UpdateProductResult> Handle(UpdateProductCommand command, CancellationToken cancellationToken)
         {
+            // to check git changes
                 var product = await session.LoadAsync<Product>(command.Id, cancellationToken);
             if (product != null)
             {
